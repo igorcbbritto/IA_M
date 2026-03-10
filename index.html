@@ -1584,10 +1584,26 @@ async function sendMessage(customMsg) {
 
   const typingId = addTyping();
 
+  // ⚠️ SUBSTITUA pela sua chave API da Anthropic (console.anthropic.com)
+  const API_KEY = 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;
+
+  if (!API_KEY || API_KEY === 'SUA_CHAVE_AQUI') {
+    removeTyping(typingId);
+    addMessage('⚠️ <strong>Configure sua chave API!</strong><br><br>Abra o arquivo HTML e substitua <em>SUA_CHAVE_AQUI</em> pela sua chave da Anthropic.<br><br>Crie uma gratuitamente em: <strong>console.anthropic.com</strong>', 'ai');
+    sendBtn.disabled = false;
+    sendBtn.innerHTML = '➤';
+    return;
+  }
+
   try {
     const response = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': API_KEY,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
       body: JSON.stringify({
         model: 'claude-sonnet-4-20250514',
         max_tokens: 1000,
@@ -1599,13 +1615,17 @@ async function sendMessage(customMsg) {
     const data = await response.json();
     removeTyping(typingId);
 
-    const reply = data.content?.map(c => c.text || '').join('') || 'Erro ao obter resposta.';
-    conversationHistory.push({ role: 'assistant', content: reply });
-    addMessage(reply, 'ai');
+    if (data.error) {
+      addMessage('❌ Erro da API: ' + data.error.message, 'ai');
+    } else {
+      const reply = data.content?.map(c => c.text || '').join('') || 'Erro ao obter resposta.';
+      conversationHistory.push({ role: 'assistant', content: reply });
+      addMessage(reply, 'ai');
+    }
 
   } catch (err) {
     removeTyping(typingId);
-    addMessage('Erro de conexão. Verifique sua internet e tente novamente.', 'ai');
+    addMessage('❌ Erro de conexão: ' + err.message, 'ai');
   }
 
   sendBtn.disabled = false;
