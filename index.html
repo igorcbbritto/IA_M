@@ -912,10 +912,10 @@
       </div>
     </div>
     <div class="tabs">
-      <button class="tab active" onclick="showTab('chat')">🧠 IA</button>
-      <button class="tab" onclick="showTab('rules')">📖 Regras</button>
-      <button class="tab" onclick="showTab('heroes')">🦸 Heróis</button>
-      <button class="tab" onclick="showTab('ref')">🎲 Ref. Rápida</button>
+      <button class="tab active" onclick="showTab('chat', this)">🧠 IA</button>
+      <button class="tab" onclick="showTab('rules', this)">📖 Regras</button>
+      <button class="tab" onclick="showTab('heroes', this)">🦸 Heróis</button>
+      <button class="tab" onclick="showTab('ref', this)">🎲 Ref. Rápida</button>
     </div>
   </div>
 
@@ -1541,11 +1541,11 @@ function closeModal(e) {
 }
 
 // ========== TABS ==========
-function showTab(name) {
+function showTab(name, btn) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   document.getElementById('screen-' + name).classList.add('active');
-  event.target.classList.add('active');
+  if (btn) btn.classList.add('active');
   if (name === 'heroes') renderHeroes();
 }
 
@@ -1613,9 +1613,9 @@ async function sendMessage(customMsg) {
 }
 
 function quickAsk(q) {
+  const chatTab = document.querySelectorAll('.tab')[0];
+  showTab('chat', chatTab);
   sendMessage(q);
-  showTab({ target: document.querySelector('.tab') }, 'chat');
-  document.querySelectorAll('.tab')[0].click();
 }
 
 function addMessage(text, role) {
