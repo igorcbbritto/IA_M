@@ -983,29 +983,30 @@
     <!-- ===== RULES SCREEN ===== -->
     <div id="screen-rules" class="screen rules-screen">
       <div class="section-title">REGRAS DO JOGO</div>
-      <div class="section-subtitle">Referência completa • Todas as expansões</div>
+      <div class="section-subtitle">Referência completa • Marvel Zombies: A Zombicide Game</div>
 
-      <div class="expansion-badge badge-base">📦 Jogo Base</div>
+      <div class="expansion-badge badge-base">📦 Jogo Base — Zombie Mode</div>
 
       <div class="rule-card" onclick="toggleRule(this)">
         <div class="rule-header">
           <span class="rule-icon">🎯</span>
           <div class="rule-title-wrap">
-            <div class="rule-title">Objetivo do Jogo</div>
-            <div class="rule-tag">Conceito fundamental</div>
+            <div class="rule-title">Objetivo e Conceito</div>
+            <div class="rule-tag">Fundamental</div>
           </div>
           <span class="rule-chevron">▼</span>
         </div>
         <div class="rule-body">
-          <h4>Como ganhar</h4>
-          <p>Em Marvel Zombies Zombicide, os jogadores controlam <strong>heróis zumbificados</strong> ou <strong>heróis vivos</strong> dependendo do cenário. O objetivo varia por missão, mas geralmente envolve completar objetivos específicos antes que os zumbis dominem o tabuleiro.</p>
-          <h4>Vitória e Derrota</h4>
+          <h4>Você é o zumbi!</h4>
+          <p>Diferente de outros jogos, aqui os <strong>jogadores controlam os Zumbis Heróis</strong> infectados. Os inimigos controlados pelo jogo são os <strong>Agentes S.H.I.E.L.D.</strong> e os <strong>Super-Heróis vivos</strong>.</p>
+          <h4>Como vencer</h4>
+          <p>Complete todos os objetivos da missão antes que o grupo seja eliminado. Jogo cooperativo: todos vencem ou perdem juntos.</p>
+          <h4>Como perder</h4>
           <ul>
-            <li>Complete todos os objetivos da missão para vencer</li>
-            <li>Os jogadores perdem se todos os heróis forem eliminados</li>
-            <li>Alguns cenários têm condições especiais de derrota</li>
+            <li>Qualquer Zumbi Herói for eliminado (vida chega a 0)</li>
+            <li>Condição especial de derrota da missão for ativada</li>
           </ul>
-          <div class="tip">💡 Leia sempre as condições especiais do cenário antes de começar!</div>
+          <div class="tip">💡 A caixa base tem 11 missões (MZ0 a MZ10). MZ0 é o tutorial obrigatório para iniciantes!</div>
         </div>
       </div>
 
@@ -1013,28 +1014,77 @@
         <div class="rule-header">
           <span class="rule-icon">🔄</span>
           <div class="rule-title-wrap">
-            <div class="rule-title">Estrutura do Turno</div>
+            <div class="rule-title">Estrutura da Rodada</div>
             <div class="rule-tag">Mecânica central</div>
           </div>
           <span class="rule-chevron">▼</span>
         </div>
         <div class="rule-body">
-          <h4>Fase dos Heróis (Players Phase)</h4>
-          <p>Cada herói recebe <strong>3 ações por turno</strong>. As ações disponíveis são:</p>
+          <h4>Fase 1 — Heróis Zumbis</h4>
           <ul>
-            <li><strong>Mover:</strong> Avançar para uma zona adjacente</li>
-            <li><strong>Atacar:</strong> Realizar um ataque corpo-a-corpo ou à distância</li>
-            <li><strong>Buscar:</strong> Procurar itens em uma zona (gera ruído)</li>
-            <li><strong>Reorganizar:</strong> Trocar itens com herói na mesma zona</li>
-            <li><strong>Usar habilidade especial</strong></li>
+            <li>Aumentar Fome de todos os heróis (+1)</li>
+            <li>Virar tokens de Ativação para verde</li>
+            <li>Ativar Zumbis Heróis em qualquer ordem. Cada herói tem <strong>3 ações</strong> (4 no nível Amarelo+)</li>
           </ul>
-          <h4>Fase dos Zumbis (Zombie Phase)</h4>
-          <ol style="padding-left:16px">
-            <li style="margin-bottom:4px">Ativar zumbis com linha de visão para heróis</li>
-            <li style="margin-bottom:4px">Mover zumbis sem linha de visão em direção ao barulho</li>
-            <li>Gerar novos zumbis (Spawn)</li>
-          </ol>
-          <div class="highlight">⚠️ Zumbis atacam automaticamente qualquer herói na mesma zona no final do movimento deles!</div>
+          <h4>Fase 2 — Inimigos</h4>
+          <ul>
+            <li>Todos os inimigos ativam: <strong>atacam</strong> se há herói na zona, ou <strong>movem 1 zona</strong> em direção ao mais próximo</li>
+            <li>Especialistas e Super-Heróis têm <strong>2 ações</strong> cada</li>
+          </ul>
+          <h4>Fase 3 — Geração (Spawn)</h4>
+          <p>Começando pelo Spawn "1" no sentido horário, comprar 1 carta por zona ativa. Usar a linha do <strong>herói com mais XP</strong>.</p>
+          <h4>Fase 4 — Final</h4>
+          <p>Verificar condições da missão. Herói eliminado = <strong>derrota imediata</strong>.</p>
+        </div>
+      </div>
+
+      <div class="rule-card" onclick="toggleRule(this)">
+        <div class="rule-header">
+          <span class="rule-icon">⚡</span>
+          <div class="rule-title-wrap">
+            <div class="rule-title">Ações Disponíveis</div>
+            <div class="rule-tag">Por turno</div>
+          </div>
+          <span class="rule-chevron">▼</span>
+        </div>
+        <div class="rule-body">
+          <h4>As 5 ações possíveis</h4>
+          <ul>
+            <li><strong>Mover:</strong> Move 1 zona. Custo extra: +1 ação por inimigo na zona que está saindo. Entrar em zona com inimigos encerra o movimento.</li>
+            <li><strong>Abrir Porta:</strong> Ao abrir 1ª porta de edifício: spawnar todas as zonas internas e revelar civis.</li>
+            <li><strong>Atacar:</strong> Usar ataque especial do herói OU Ataque Devorar.</li>
+            <li><strong>Buscar Traço (Fouiller):</strong> Comprar carta de Traço Zumbi. Apenas <strong>1 vez por turno</strong>.</li>
+            <li><strong>Interagir com Objetivo:</strong> Ativar objetivo da missão na zona atual.</li>
+          </ul>
+          <div class="tip">💡 O herói não precisa usar todas as ações. Pode encerrar o turno quando quiser.</div>
+        </div>
+      </div>
+
+      <div class="rule-card" onclick="toggleRule(this)">
+        <div class="rule-header">
+          <span class="rule-icon">🍖</span>
+          <div class="rule-title-wrap">
+            <div class="rule-title">Sistema de Fome (The Hunger)</div>
+            <div class="rule-tag">Mecânica exclusiva</div>
+          </div>
+          <span class="rule-chevron">▼</span>
+        </div>
+        <div class="rule-body">
+          <h4>Como funciona</h4>
+          <ul>
+            <li>Fome vai de <strong>0 a 4</strong></li>
+            <li>Aumenta <strong>+1 automaticamente</strong> no início de cada turno do herói</li>
+            <li>Ao atacar: role dados extras igual ao nível atual de Fome</li>
+            <li>Para cada resultado <strong>"1"</strong> nos dados de ataque: Fome +1 imediatamente</li>
+          </ul>
+          <h4>Estado Voraz (Ravenous) — Fome = 4</h4>
+          <div class="highlight">⚠️ Quando a Fome atinge 4 o herói fica Voraz:</div>
+          <ul>
+            <li>Só pode usar ações <strong>Mover</strong> e <strong>Devorar</strong></li>
+            <li>Sofre <strong>1 ferimento</strong> ao final do turno se não devorar</li>
+            <li>Se Devorar acertar: Fome volta a <strong>0</strong></li>
+          </ul>
+          <div class="tip">💡 Estratégia: use a fome alta para ganhar dados extras, mas sempre tenha um civil próximo como "seguro"!</div>
         </div>
       </div>
 
@@ -1043,26 +1093,65 @@
           <span class="rule-icon">⚔️</span>
           <div class="rule-title-wrap">
             <div class="rule-title">Sistema de Combate</div>
-            <div class="rule-tag">Mecânica de dados</div>
+            <div class="rule-tag">Dados e acertos</div>
           </div>
           <span class="rule-chevron">▼</span>
         </div>
         <div class="rule-body">
-          <h4>Atacar com Heróis</h4>
-          <p>Ao atacar, role os dados conforme sua arma. Cada resultado igual ou acima do valor mínimo (<strong>Hit Value</strong>) conta como 1 acerto.</p>
-          <h4>Dano e Eliminação</h4>
-          <ul>
-            <li>Cada acerto causa 1 de dano</li>
-            <li>Zumbis comuns precisam de 1 dano para serem eliminados</li>
-            <li>Abominations precisam de dano maior (verificar ficha)</li>
-            <li>Dano extra é perdido, a menos que haja múltiplos inimigos</li>
-          </ul>
-          <h4>Corpo a Corpo vs Distância</h4>
-          <ul>
-            <li><strong>Melee:</strong> Ataca apenas a zona atual do herói</li>
-            <li><strong>Ranged:</strong> Pode atacar zonas adjacentes, mas pode acertar aliados</li>
-          </ul>
-          <div class="tip">💡 Ataques à distância em zonas com aliados: role primeiro para ver se acerta aliados!</div>
+          <h4>Como atacar</h4>
+          <ol style="padding-left:16px">
+            <li style="margin-bottom:4px">Selecionar zona alvo dentro do alcance (com Linha de Visão)</li>
+            <li style="margin-bottom:4px">Rolar dados base + dados bônus de Fome</li>
+            <li style="margin-bottom:4px">Acertos = resultados >= valor de Acurácia do ataque</li>
+            <li>Inimigo eliminado quando recebe Hits >= Resistência em <strong>UM ÚNICO ataque</strong></li>
+          </ol>
+          <div class="highlight">⚠️ Hits NÃO acumulam entre ataques diferentes! É tudo ou nada em cada ataque.</div>
+          <h4>Ataque Devorar</h4>
+          <p>Corpo a corpo, zona atual, acerta <strong>4+</strong>. Elimina <strong>1 único alvo</strong> (hits excedentes perdidos). ÚNICO ataque que pode mirar civis. Ao eliminar: Fome vai a 0.</p>
+          <h4>Aliados na zona</h4>
+          <p>Seus aliados Zumbis Heróis <strong>nunca são afetados</strong> pelos seus ataques, mesmo que errem.</p>
+        </div>
+      </div>
+
+      <div class="rule-card" onclick="toggleRule(this)">
+        <div class="rule-header">
+          <span class="rule-icon">🎯</span>
+          <div class="rule-title-wrap">
+            <div class="rule-title">Prioridade de Alvos</div>
+            <div class="rule-tag">Ordem obrigatória</div>
+          </div>
+          <span class="rule-chevron">▼</span>
+        </div>
+        <div class="rule-body">
+          <h4>Ao atacar uma zona com múltiplos inimigos, siga esta ordem:</h4>
+          <div class="phase-card" style="margin-bottom:6px">
+            <div class="phase-num">1</div>
+            <div class="phase-content">
+              <div class="phase-title">Super-Heróis Vivos</div>
+              <div class="phase-desc">Inimigos mais poderosos. XP = Resistência deles. Todo dano em 1 ataque para eliminar.</div>
+            </div>
+          </div>
+          <div class="phase-card" style="margin-bottom:6px">
+            <div class="phase-num">2</div>
+            <div class="phase-content">
+              <div class="phase-title">Guardas (Guards)</div>
+              <div class="phase-desc">Resistência 2. Precisam de 2 hits num único ataque.</div>
+            </div>
+          </div>
+          <div class="phase-card" style="margin-bottom:6px">
+            <div class="phase-num">3</div>
+            <div class="phase-content">
+              <div class="phase-title">Soldados e Especialistas</div>
+              <div class="phase-desc">Resistência 1. 1 hit para eliminar.</div>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">4</div>
+            <div class="phase-content">
+              <div class="phase-title">Civis — APENAS por Devorar</div>
+              <div class="phase-desc">Ataques normais ignoram civis. Só o ataque Devorar pode eliminar civis.</div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -1070,28 +1159,23 @@
         <div class="rule-header">
           <span class="rule-icon">⚠️</span>
           <div class="rule-title-wrap">
-            <div class="rule-title">Níveis de Perigo (Danger Level)</div>
-            <div class="rule-tag">Progressão de dificuldade</div>
+            <div class="rule-title">Experiência e Níveis de Perigo</div>
+            <div class="rule-tag">Progressão</div>
           </div>
           <span class="rule-chevron">▼</span>
         </div>
         <div class="rule-body">
-          <h4>Os 4 Níveis</h4>
-          <div style="margin-bottom:8px">
-            <span class="danger-level lvl-blue"></span><strong>Azul (1):</strong> Nível inicial. Spawn mínimo, zumbis fracos.
-          </div>
-          <div style="margin-bottom:8px">
-            <span class="danger-level lvl-yellow"></span><strong>Amarelo (2):</strong> Mais spawns, zumbis mais agressivos.
-          </div>
-          <div style="margin-bottom:8px">
-            <span class="danger-level lvl-orange"></span><strong>Laranja (3):</strong> Spawns frequentes, especiais aparecem.
-          </div>
-          <div style="margin-bottom:8px">
-            <span class="danger-level lvl-red"></span><strong>Vermelho (4):</strong> Caos total. Spawns máximos, Abominations.
-          </div>
-          <h4>Como Avançar de Nível</h4>
-          <p>O nível avança quando os heróis coletam <strong>XP suficiente</strong> (eliminando zumbis e completando objetivos). Isso é tanto recompensa quanto ameaça!</p>
-          <div class="highlight">⚠️ Avançar de nível melhora o herói MAS também aumenta a ameaça zumbi!</div>
+          <h4>Ganhando XP</h4>
+          <ul>
+            <li>1 XP por inimigo comum eliminado</li>
+            <li>Super-Heróis: XP = Resistência deles</li>
+          </ul>
+          <h4>Os 4 Níveis de Perigo</h4>
+          <div style="margin-bottom:8px"><span class="danger-level lvl-blue"></span><strong>Azul (0-6 XP):</strong> 3 ações/turno. 1 Skill ativa.</div>
+          <div style="margin-bottom:8px"><span class="danger-level lvl-yellow"></span><strong>Amarelo (7-18 XP):</strong> <strong>+1 ação = 4 ações/turno.</strong> Nova Skill desbloqueada.</div>
+          <div style="margin-bottom:8px"><span class="danger-level lvl-orange"></span><strong>Laranja (19-42 XP):</strong> Nova Skill desbloqueada.</div>
+          <div style="margin-bottom:8px"><span class="danger-level lvl-red"></span><strong>Vermelho (43+ XP):</strong> Skill final desbloqueada.</div>
+          <div class="highlight">⚠️ O spawn usa o nível do herói com MAIS XP. Ficar poderoso aumenta a ameaça!</div>
         </div>
       </div>
 
@@ -1099,112 +1183,142 @@
         <div class="rule-header">
           <span class="rule-icon">🧟</span>
           <div class="rule-title-wrap">
-            <div class="rule-title">Tipos de Zumbis</div>
-            <div class="rule-tag">Ameaças do tabuleiro</div>
+            <div class="rule-title">Inimigos S.H.I.E.L.D.</div>
+            <div class="rule-tag">Tipos e características</div>
           </div>
           <span class="rule-chevron">▼</span>
         </div>
         <div class="rule-body">
-          <h4>Zumbis Comuns (Walkers)</h4>
+          <h4>Soldados (Troopers)</h4>
+          <ul><li>1 vida • 1 ação • Causam 1 dano corpo a corpo</li></ul>
+          <h4>Especialistas (Specialists)</h4>
+          <ul><li>1 vida • <strong>2 ações</strong> • Mais rápidos e perigosos</li></ul>
+          <h4>Guardas (Guards)</h4>
+          <ul><li><strong>2 vidas</strong> • 1 ação • Resistentes. Às vezes escoltam civis</li></ul>
+          <h4>Super-Heróis Vivos (Abominations)</h4>
           <ul>
-            <li>1 ação por turno (mover ou atacar)</li>
-            <li>1 ponto de vida</li>
-            <li>Causam 1 dano por ataque</li>
+            <li><strong>2 ações</strong> • Resistência variável (ver carta)</li>
+            <li>Habilidade única ativa enquanto estiver no tabuleiro</li>
+            <li>Todo dano deve ser em <strong>um único ataque</strong> para eliminar</li>
+            <li>XP ganho = Resistência do herói eliminado</li>
           </ul>
-          <h4>Corredores (Runners)</h4>
-          <ul>
-            <li>2 ações por turno</li>
-            <li>1 ponto de vida mas mais difíceis de escapar</li>
-          </ul>
-          <h4>Gordos (Fatties)</h4>
-          <ul>
-            <li>3 pontos de vida</li>
-            <li>Bloqueiam passagem em corredores</li>
-            <li>Causam 2 de dano</li>
-          </ul>
-          <h4>Abominations</h4>
-          <ul>
-            <li>Múltiplos pontos de vida</li>
-            <li>Resistentes a ataques fracos</li>
-            <li>Presença deles indica nível máximo de perigo</li>
-          </ul>
-          <h4>Zumbis Heróis (Super-Zumbis)</h4>
-          <p>Versões zumbificadas de super-heróis com habilidades únicas. Cada um tem sua ficha especial.</p>
+          <div class="tip">💡 Spawn padrão: Azul=2 Soldados, Amarelo=3, Laranja=7, Vermelho=9.</div>
         </div>
       </div>
 
       <div class="rule-card" onclick="toggleRule(this)">
         <div class="rule-header">
-          <span class="rule-icon">🔊</span>
+          <span class="rule-icon">👥</span>
           <div class="rule-title-wrap">
-            <div class="rule-title">Sistema de Ruído (Noise)</div>
-            <div class="rule-tag">Mecânica de atração</div>
+            <div class="rule-title">Civis (Bystanders)</div>
+            <div class="rule-tag">Alvos especiais</div>
           </div>
           <span class="rule-chevron">▼</span>
         </div>
         <div class="rule-body">
-          <h4>O que gera ruído</h4>
+          <h4>Regras gerais</h4>
           <ul>
-            <li>Buscar itens: +1 ruído</li>
-            <li>Certas armas: indicado na ficha</li>
-            <li>Habilidades específicas</li>
-            <li>Portas abertas: situacional</li>
+            <li>1 vida • 1 ação • Só eliminados por <strong>Devorar</strong></li>
+            <li>Ao devorar: herói ganha <strong>habilidade especial</strong> do civil (apenas 1 por vez)</li>
+            <li>Se receber novo civil: pode substituir o anterior ou descartar o novo</li>
           </ul>
-          <h4>Como zumbis reagem ao ruído</h4>
-          <p>Zumbis sem linha de visão para heróis se movem em direção à zona com <strong>maior concentração de ruído</strong>. Estratégia: use ruído para desviar zumbis!</p>
-          <div class="tip">💡 Tokens de ruído são colocados no tabuleiro e removidos no final de cada fase de heróis.</div>
+          <h4>Civil Combatente</h4>
+          <p>Age como inimigo (ataca ou se move em direção aos heróis). Se gerado com Guard e o Guard morrer, gera novo Guard.</p>
+          <h4>Civil Pacífico</h4>
+          <p>Foge em direção ao ponto de spawn mais próximo. Se entrar em Spawn: removido do tabuleiro.</p>
+          <h4>Civis da caixa base</h4>
+          <p>Mary Jane Watson, Tia May, Pepper Potts, Agente Coulson, Sharon Carter, J. Jonah Jameson, Betty Ross, General Thunderbolt Ross, Okoye, Wong, Blind Al, Hydra Bob.</p>
+        </div>
+      </div>
+
+      <div class="rule-card" onclick="toggleRule(this)">
+        <div class="rule-header">
+          <span class="rule-icon">🃏</span>
+          <div class="rule-title-wrap">
+            <div class="rule-title">Cartas de Traço Zumbi</div>
+            <div class="rule-tag">Habilidades especiais</div>
+          </div>
+          <span class="rule-chevron">▼</span>
+        </div>
+        <div class="rule-body">
+          <h4>Como funcionam</h4>
+          <ul>
+            <li>Substituem a busca por equipamentos do Zombicide tradicional</li>
+            <li>Podem ser buscadas em <strong>qualquer lugar</strong> do mapa (ação Fouiller)</li>
+            <li><strong>Uso único</strong> — descartadas após usar</li>
+            <li>Cada herói pode ter até <strong>2 cartas</strong> em reserva</li>
+          </ul>
+          <h4>Gerenciamento</h4>
+          <p>Se já tem 2 ao comprar nova: descarta a nova OU substitui uma das antigas. Se o deck acabar: embaralhar descartadas para novo deck.</p>
+          <div class="tip">💡 Guarde cartas poderosas para usar contra Super-Heróis inimigos ou situações críticas!</div>
+        </div>
+      </div>
+
+      <div class="rule-card" onclick="toggleRule(this)">
+        <div class="rule-header">
+          <span class="rule-icon">🗺️</span>
+          <div class="rule-title-wrap">
+            <div class="rule-title">Missões — Caixa Base</div>
+            <div class="rule-tag">11 missões completas</div>
+          </div>
+          <span class="rule-chevron">▼</span>
+        </div>
+        <div class="rule-body">
+          <h4>Campanha completa</h4>
+          <div class="highlight">MZ0 — Fome Crescente: TUTORIAL. Introdução à fome, movimento e combate.</div>
+          <ul>
+            <li><strong>MZ1 — A Fome:</strong> Devorar 4 civis e escapar. Perde se algum humano escapar.</li>
+            <li><strong>MZ2 — Torre dos Vingadores:</strong> Confronto no interior da Torre.</li>
+            <li><strong>MZ3 — Defesa do Sanctum:</strong> Proteger o Sanctum Sanctorum.</li>
+            <li><strong>MZ4 — Ferramentas Valiosas:</strong> Foco em cartas de Traço Zumbi.</li>
+            <li><strong>MZ5 — Loucura na Oscorp:</strong> Confronto no laboratório da Oscorp.</li>
+            <li><strong>MZ6 — Invadindo Hell's Kitchen:</strong> Exploração pelas ruas e vielas.</li>
+            <li><strong>MZ7 — Dividir e Conquistar:</strong> Longa e difícil, exige separação do grupo.</li>
+            <li><strong>MZ8 — Armadilha da S.H.I.E.L.D.:</strong> Sobrevivência contra emboscada.</li>
+            <li><strong>MZ9 — Controle Populacional:</strong> Eliminar pontos de geração.</li>
+            <li><strong>MZ10 — Ingresso para o Multiverso:</strong> MISSÃO FINAL. A mais complexa.</li>
+          </ul>
+          <div class="tip">💡 Tiles usados: Hell's Kitchen, Torre dos Vingadores, Oscorp, Sanctum Sanctorum e ruas de Nova York.</div>
         </div>
       </div>
 
       <br>
-      <div class="expansion-badge badge-shield">🧟 EXPANSÕES OFICIAIS</div>
+      <div class="expansion-badge badge-shield">🧬 EXPANSÕES</div>
 
       <div class="rule-card" onclick="toggleRule(this)">
         <div class="rule-header">
-          <span class="rule-icon">🎮</span>
+          <span class="rule-icon">🔵</span>
           <div class="rule-title-wrap">
             <div class="rule-title">X-Men Resistance</div>
-            <div class="rule-tag">Caixa base separada • Ativa Modo Herói</div>
+            <div class="rule-tag">Caixa grande • Ativa Modo Herói</div>
           </div>
           <span class="rule-chevron">▼</span>
         </div>
         <div class="rule-body">
-          <h4>O que é</h4>
-          <p>Segunda caixa base independente. Pode ser jogada sozinha OU combinada com a caixa base para ativar o <strong>Modo Herói</strong>.</p>
-          <h4>Modo Herói</h4>
-          <p>Jogadores controlam Super-Heróis vivos (X-Men) enfrentando Zumbis Heróis controlados pelo jogo. Papéis invertidos em relação à caixa base!</p>
-          <h4>Heróis jogáveis (X-Men)</h4>
-          <ul>
-            <li>Magneto, Tempestade, Mística, Colosso, Vampira, Wolverine</li>
-          </ul>
+          <h4>O que adiciona</h4>
+          <p>Caixa independente. Pode ser jogada sozinha OU combinada com a caixa base para ativar o <strong>Modo Herói</strong> (papéis invertidos).</p>
+          <h4>Heróis vivos jogáveis (X-Men)</h4>
+          <p>Wolverine, Vampira, Colossus, Tempestade, Mística, Magneto.</p>
           <h4>Zumbis inimigos (X-Men)</h4>
-          <ul>
-            <li>Homem de Gelo, Juggernaut, Ciclope, Fênix Negra, Psylocke, Sabretooth</li>
-          </ul>
-          <div class="tip">💡 Também inclui 5 missões extras para usar com a caixa base Marvel Zombies.</div>
+          <p>Ciclope, Fanático, Psylocke, Homem de Gelo, Fênix Negra, Dentes-de-Sabre.</p>
+          <div class="tip">💡 Inclui 5 missões extras para usar com a caixa base Zombie Mode.</div>
         </div>
       </div>
 
       <div class="rule-card" onclick="toggleRule(this)">
         <div class="rule-header">
-          <span class="rule-icon">🏠</span>
+          <span class="rule-icon">🟢</span>
           <div class="rule-title-wrap">
             <div class="rule-title">Heroes' Resistance</div>
-            <div class="rule-tag">Caixa menor • Autônoma ou expansão</div>
+            <div class="rule-tag">Caixa menor • Autônoma</div>
           </div>
           <span class="rule-chevron">▼</span>
         </div>
         <div class="rule-body">
-          <h4>Versão compacta</h4>
-          <p>Caixa menor e mais acessível. Pode ser jogada sozinha (1-4 jogadores) ou como expansão da caixa base.</p>
-          <h4>Heróis vivos inclusos</h4>
-          <ul>
-            <li>Hulk, Homem-Aranha, Soldado Invernal, Visão, Vespa, Pantera Negra</li>
-          </ul>
-          <h4>Zumbis Heróis inclusos</h4>
-          <ul>
-            <li>Feiticeira Escarlate, Doutor Estranho, Homem de Ferro, Capitão América</li>
-          </ul>
+          <h4>Heróis vivos jogáveis</h4>
+          <p>Pantera Negra, Soldado Invernal, Homem-Aranha, Visão, Hulk (vivo), Vespa (viva).</p>
+          <h4>Zumbis inimigos</h4>
+          <p>Capitão América, Doutor Estranho, Feiticeira Escarlate, Homem de Ferro.</p>
           <div class="highlight">⚠️ Usa standees de papelão para zumbis comuns (não miniaturas) para reduzir custo.</div>
         </div>
       </div>
@@ -1213,47 +1327,38 @@
         <div class="rule-header">
           <span class="rule-icon">💀</span>
           <div class="rule-title-wrap">
+            <div class="rule-title">Galactus, o Devorador de Mundos</div>
+            <div class="rule-tag">Expansão grande • Boss épico</div>
+          </div>
+          <span class="rule-chevron">▼</span>
+        </div>
+        <div class="rule-body">
+          <h4>Galactus (jogável ou chefe)</h4>
+          <p>Ataque: <strong>Poder Cósmico</strong> — ataca TODOS inimigos no tabuleiro, acerta 2+, 1 dano. Cada 6 = 3 danos. Ocupa múltiplas zonas. Move 2 zonas por ação. Pode ter 3 heróis como Heraldos com bônus.</p>
+          <h4>Surfista Prateado (Zumbi)</h4>
+          <p>Ataque: <strong>Rajada Cósmica</strong> — linha reta até 4 zonas, 4+, 2 danos.</p>
+          <h4>Mecânica nova</h4>
+          <p>Introduz destruição de tiles no tabuleiro.</p>
+        </div>
+      </div>
+
+      <div class="rule-card" onclick="toggleRule(this)">
+        <div class="rule-header">
+          <span class="rule-icon">🔴</span>
+          <div class="rule-title-wrap">
             <div class="rule-title">Hydra Resurrection</div>
             <div class="rule-tag">Expansão • Caveira Vermelha</div>
           </div>
           <span class="rule-chevron">▼</span>
         </div>
         <div class="rule-body">
-          <h4>Inimigo especial: Caveira Vermelha</h4>
-          <p>Adiciona o <strong>Caveira Vermelha</strong> como inimigo especial (miniatura vermelha) comandando soldados Hydra zumbificados.</p>
-          <h4>Novos componentes</h4>
-          <ul>
-            <li>25 miniaturas no total</li>
-            <li>6 tiles dupla-face (S.H.I.E.L.D. Helicarrier / Base Hydra)</li>
-            <li>14 soldados Hydra (novos inimigos)</li>
-            <li>Heróis: Viúva Negra, Homem-Formiga, She-Hulk, Visão</li>
-            <li>Zumbis Heróis: Gavião Arqueiro, Mercúrio, Falcão, Loki</li>
-          </ul>
-          <div class="tip">💡 Bystanders Nick Fury e Maria Hill inclusos.</div>
-        </div>
-      </div>
-
-      <div class="rule-card" onclick="toggleRule(this)">
-        <div class="rule-header">
-          <span class="rule-icon">🌌</span>
-          <div class="rule-title-wrap">
-            <div class="rule-title">Guardians of the Galaxy</div>
-            <div class="rule-tag">Expansão • Thanos como boss</div>
-          </div>
-          <span class="rule-chevron">▼</span>
-        </div>
-        <div class="rule-body">
-          <h4>Inimigo especial: Thanos</h4>
-          <p><strong>Thanos</strong> disponível como inimigo especial em ambos os modos (Herói e Zumbi).</p>
-          <h4>Heróis vivos inclusos</h4>
-          <ul>
-            <li>Gamora, Groot, Mantis, Nova</li>
-          </ul>
-          <h4>Zumbis Heróis inclusos</h4>
-          <ul>
-            <li>Star-Lord, Rocket, Drax, Nebula</li>
-          </ul>
-          <div class="tip">💡 Bystanders: Howard the Duck e Cosmo o Cão Espacial.</div>
+          <h4>Novos heróis vivos</h4>
+          <p>Viúva Negra, Homem-Formiga, She-Hulk, Visão.</p>
+          <h4>Novos Zumbis Heróis</h4>
+          <p>Gavião Arqueiro, Mercúrio, Falcão, Loki.</p>
+          <h4>Inimigo especial</h4>
+          <p><strong>Caveira Vermelha</strong> como inimigo especial comandando 14 soldados Hydra zumbificados. Inclui 6 novos tiles (S.H.I.E.L.D. Helicarrier / Base Hydra).</p>
+          <div class="tip">💡 Bystanders inclusos: Nick Fury e Maria Hill.</div>
         </div>
       </div>
 
@@ -1262,17 +1367,17 @@
     <!-- ===== HEROES SCREEN ===== -->
     <div id="screen-heroes" class="screen heroes-screen">
       <div class="section-title">HERÓIS & VILÕES</div>
-      <div class="section-subtitle">Habilidades e poderes • Todas as expansões</div>
+      <div class="section-subtitle">Habilidades completas por nível • Todas as caixas</div>
 
       <div class="hero-filter">
         <button class="filter-chip active" onclick="filterHeroes('all', this)">Todos</button>
         <button class="filter-chip" onclick="filterHeroes('hero', this)">Zumbis Heróis</button>
-        <button class="filter-chip" onclick="filterHeroes('villain', this)">Super-Heróis</button>
+        <button class="filter-chip" onclick="filterHeroes('villain', this)">Super-Heróis Inimigos</button>
         <button class="filter-chip" onclick="filterHeroes('shield', this)">S.H.I.E.L.D.</button>
+        <button class="filter-chip" onclick="filterHeroes('xmen', this)">X-Men</button>
       </div>
 
       <div class="hero-grid" id="heroGrid">
-        <!-- Dynamically rendered -->
       </div>
     </div>
 
@@ -1398,153 +1503,237 @@
 <script>
 // ========== DATA ==========
 const HEROES = [
+  // ===== ZUMBIS HERÓIS — CAIXA BASE =====
   {
-    id: 'capamerica', name: 'Capitão América', emoji: '🛡️', side: 'Zumbi Herói', team: 'hero',
-    power: 'Super soldado infectado. Controla o escudo de vibranium mesmo como zumbi.',
-    stats: ['Vida: 5', 'Fome máx: 4', 'Ações: 3→4'],
+    id: 'hulk', name: 'Hulk', emoji: '💚', side: 'Zumbi Herói • Caixa Base', team: 'hero',
+    power: 'Tanque puro. O mais resistente e com maior dano da caixa base. Ataca TODOS na zona.',
+    stats: ['Vida: 5', 'Fome máx: 4', 'Acurácia: 4+'],
     abilities: [
-      { name: 'Shield Throw (Ataque único)', desc: 'Ranged. Alcance 0-1. 2 dados base. Acurácia 4+. Pode atacar zona adjacente sem penalidade.' },
-      { name: 'Devour (Devorar)', desc: 'Melee. Zona atual. Elimina 1 alvo e zera a Fome. Único ataque que funciona contra Espectadores.' },
-      { name: 'Skill Azul', desc: 'Habilidade inicial desbloqueada desde o começo do jogo.' },
-      { name: 'Skill Amarelo (7 XP)', desc: 'Desbloqueada ao atingir nível Amarelo. +1 ação por turno também é ganho neste nível.' },
-      { name: 'Skill Laranja (19 XP)', desc: 'Desbloqueada ao atingir nível Laranja.' },
-      { name: 'Skill Vermelho (43 XP)', desc: 'Habilidade máxima desbloqueada no nível Vermelho.' }
-    ],
-    color: '#4488FF'
-  },
-  {
-    id: 'ironman', name: 'Homem de Ferro', emoji: '🦾', side: 'Zumbi Herói', team: 'hero',
-    power: 'Tony Stark infectado. A armadura continua funcionando mesmo com o corpo em decomposição.',
-    stats: ['Vida: 5', 'Fome máx: 4', 'Ações: 3→4'],
-    abilities: [
-      { name: 'Missile Wave (Ataque único)', desc: 'Ranged. Alcance 1 (não pode atacar zona atual!). 3 dados base. Acurácia 4+. Melhor alcance da caixa base.' },
-      { name: 'Devour (Devorar)', desc: 'Melee. Zona atual. Elimina 1 alvo e zera a Fome. Único ataque que funciona contra Espectadores.' },
-      { name: 'Skill Azul', desc: 'Habilidade inicial ativa desde o início.' },
-      { name: 'Skill Amarelo (7 XP)', desc: 'Desbloqueada ao atingir nível Amarelo. +1 ação por turno.' },
-      { name: 'Skill Laranja (19 XP)', desc: 'Desbloqueada ao atingir nível Laranja.' },
-      { name: 'Skill Vermelho (43 XP)', desc: 'Habilidade máxima no nível Vermelho.' }
-    ],
-    color: '#CC4400'
-  },
-  {
-    id: 'wasp', name: 'Vespa (Wasp)', emoji: '🐝', side: 'Zumbi Herói', team: 'hero',
-    power: 'Janet Van Dyne infectada. Menor e mais ágil dos Zumbis Heróis. Alta acurácia.',
-    stats: ['Vida: 3', 'Fome máx: 4', 'Ações: 3→4'],
-    abilities: [
-      { name: 'Wasp Sting (Ataque único)', desc: 'Ranged. Alcance 0-1. 2 dados base. Acurácia 3+ (melhor acurácia da caixa base!). Pode atacar zona atual ou adjacente.' },
-      { name: 'Devour (Devorar)', desc: 'Melee. Zona atual. Elimina 1 alvo e zera a Fome.' },
-      { name: 'Skill Azul', desc: 'Habilidade inicial ativa desde o início.' },
-      { name: 'Skill Amarelo (7 XP)', desc: 'Desbloqueada ao atingir nível Amarelo. +1 ação por turno.' },
-      { name: 'Skill Laranja (19 XP)', desc: 'Desbloqueada ao atingir nível Laranja.' },
-      { name: 'Skill Vermelho (43 XP)', desc: 'Habilidade máxima no nível Vermelho.' }
-    ],
-    color: '#FFAA00'
-  },
-  {
-    id: 'hulk', name: 'Hulk', emoji: '💚', side: 'Zumbi Herói', team: 'hero',
-    power: 'Bruce Banner infectado. O mais resistente e poderoso da caixa base. Tanque do grupo.',
-    stats: ['Vida: 7', 'Fome máx: 4', 'Ações: 3→4'],
-    abilities: [
-      { name: 'Thunderclap (Ataque único)', desc: 'Melee. Zona atual. 4 dados base (mais dados da caixa!). Acurácia 4+. Ataque corpo-a-corpo devastador.' },
-      { name: 'Devour (Devorar)', desc: 'Melee. Zona atual. Elimina 1 alvo e zera a Fome.' },
-      { name: 'Skill Azul', desc: 'Habilidade inicial ativa desde o início.' },
-      { name: 'Skill Amarelo (7 XP)', desc: 'Desbloqueada ao atingir nível Amarelo. +1 ação por turno.' },
-      { name: 'Skill Laranja (19 XP)', desc: 'Desbloqueada ao atingir nível Laranja.' },
-      { name: 'Skill Vermelho (43 XP)', desc: 'Habilidade máxima no nível Vermelho.' }
+      { name: 'Esmagamento Sísmico (Ataque Especial)', desc: 'Ataca TODOS os inimigos na zona atual. Causa 2 de dano com 4+.' },
+      { name: 'Devorar (Ataque Base)', desc: 'Corpo a corpo, zona atual, acerta 4+. Elimina 1 alvo e zera a Fome. Único ataque que atinge civis.' },
+      { name: '🔵 Azul — Quanto Mais Raiva...', desc: 'Cada dano sofrido dá +1 de dano no próximo ataque (acumulável).' },
+      { name: '🟡 Amarelo — Pele Grossa (7 XP)', desc: 'Reduz todo dano sofrido em 1 (mínimo 1). +1 ação por turno neste nível.' },
+      { name: '🟠 Laranja — Pisotear (19 XP)', desc: 'Move e ataca na mesma ação.' },
+      { name: '🔴 Vermelho — Hulk Esmaga! (43 XP)', desc: 'Ataque especial causa 3 de dano e empurra sobreviventes para zonas adjacentes.' }
     ],
     color: '#22AA44'
   },
   {
-    id: 'captainmarvel', name: 'Capitã Marvel', emoji: '⭐', side: 'Zumbi Herói', team: 'hero',
-    power: 'Carol Danvers infectada. Grande alcance e poder cósmico comprometido pela Fome.',
-    stats: ['Vida: 5', 'Fome máx: 4', 'Ações: 3→4'],
+    id: 'wasp', name: 'Vespa (Wasp)', emoji: '🐝', side: 'Zumbi Herói • Caixa Base', team: 'hero',
+    power: 'Velocidade e dano perfurante. Ataca múltiplos alvos em zonas adjacentes.',
+    stats: ['Vida: 5', 'Fome máx: 4', 'Acurácia: 4+'],
     abilities: [
-      { name: 'Photon Blast (Ataque único)', desc: 'Ranged. Alcance 0-2 (maior alcance da caixa base!). 3 dados base. Acurácia 4+.' },
-      { name: 'Devour (Devorar)', desc: 'Melee. Zona atual. Elimina 1 alvo e zera a Fome.' },
-      { name: 'Skill Azul', desc: 'Habilidade inicial ativa desde o início.' },
-      { name: 'Skill Amarelo (7 XP)', desc: 'Desbloqueada ao atingir nível Amarelo. +1 ação por turno.' },
-      { name: 'Skill Laranja (19 XP)', desc: 'Desbloqueada ao atingir nível Laranja.' },
-      { name: 'Skill Vermelho (43 XP)', desc: 'Habilidade máxima no nível Vermelho.' }
+      { name: 'Ferrões Bioelétricos (Ataque Especial)', desc: 'Ataca até 4 alvos diferentes em zonas adjacentes. Acerta com 4+. Causa 1 de dano cada.' },
+      { name: 'Devorar (Ataque Base)', desc: 'Corpo a corpo, zona atual, acerta 4+. Elimina 1 alvo e zera a Fome.' },
+      { name: '🔵 Azul — Encolher', desc: 'Pode se mover por zonas com inimigos sem provocar ataques.' },
+      { name: '🟡 Amarelo — Voo Ágil (7 XP)', desc: '+1 ação de movimento por turno. +1 ação por turno neste nível.' },
+      { name: '🟠 Laranja — Enxame (19 XP)', desc: 'Pode atacar o mesmo alvo múltiplas vezes no mesmo ataque especial.' },
+      { name: '🔴 Vermelho — Invisível (43 XP)', desc: 'Inimigos não podem alvejá-la se houver outro herói na mesma zona.' }
+    ],
+    color: '#FFAA00'
+  },
+  {
+    id: 'captainmarvel', name: 'Capitã Marvel', emoji: '⭐', side: 'Zumbi Herói • Caixa Base', team: 'hero',
+    power: 'Poder cósmico e dano em área. Ataca zona alvo e todas as zonas adjacentes.',
+    stats: ['Vida: 5', 'Fome máx: 4', 'Acurácia: 4+'],
+    abilities: [
+      { name: 'Explosão Binária (Ataque Especial)', desc: 'Ataca TODOS os inimigos em uma zona alvo E suas zonas adjacentes. Acerta 4+. Causa 1 dano.' },
+      { name: 'Devorar (Ataque Base)', desc: 'Corpo a corpo, zona atual, acerta 4+. Elimina 1 alvo e zera a Fome.' },
+      { name: '🔵 Azul — Voo Cósmico', desc: 'Ignora penalidade de movimento por inimigos.' },
+      { name: '🟡 Amarelo — Absorção de Energia (7 XP)', desc: 'Ao sofrer dano de ataque à distância, recupera 1 de vida. +1 ação por turno neste nível.' },
+      { name: '🟠 Laranja — Modo Binário (19 XP)', desc: 'Ataque especial causa 2 de dano.' },
+      { name: '🔴 Vermelho — Força de Vontade (43 XP)', desc: 'Uma vez por rodada, pode repetir qualquer rolagem de dado.' }
     ],
     color: '#CC0000'
   },
   {
-    id: 'deadpool', name: 'Deadpool', emoji: '⚔️', side: 'Zumbi Herói', team: 'hero',
-    power: 'Wade Wilson infectado. Melee specialist. O fator de cura desacelerou a infecção mas não impediu.',
-    stats: ['Vida: 4', 'Fome máx: 4', 'Ações: 3→4'],
+    id: 'deadpool', name: 'Deadpool', emoji: '⚔️', side: 'Zumbi Herói • Caixa Base', team: 'hero',
+    power: 'Caótico e imprevisível. Ataca 3 alvos diferentes, cura passiva, quase imortal.',
+    stats: ['Vida: 5', 'Fome máx: 4', 'Acurácia: 3+'],
     abilities: [
-      { name: 'Dual Katanas (Ataque único)', desc: 'Melee. Zona atual. 3 dados base. Acurácia 4+. Especialista em combate corpo-a-corpo.' },
-      { name: 'Devour (Devorar)', desc: 'Melee. Zona atual. Elimina 1 alvo e zera a Fome.' },
-      { name: 'Skill Azul', desc: 'Habilidade inicial ativa desde o início.' },
-      { name: 'Skill Amarelo (7 XP)', desc: 'Desbloqueada ao atingir nível Amarelo. +1 ação por turno.' },
-      { name: 'Skill Laranja (19 XP)', desc: 'Desbloqueada ao atingir nível Laranja.' },
-      { name: 'Skill Vermelho (43 XP)', desc: 'Habilidade máxima no nível Vermelho.' }
+      { name: 'Bang! Bang! Bang! (Ataque Especial)', desc: 'Ataca até 3 alvos diferentes. Role 1 dado para cada. Acerta 3+. Cada 6 conta como 2 acertos.' },
+      { name: 'Devorar (Ataque Base)', desc: 'Corpo a corpo, zona atual, acerta 4+. Elimina 1 alvo e zera a Fome.' },
+      { name: '🔵 Azul — Fator de Cura Acelerado', desc: 'Recupera 1 de vida no início de cada turno.' },
+      { name: '🟡 Amarelo — Comentários Inapropriados (7 XP)', desc: 'Uma vez por jogo, pode fazer um inimigo perder a vez de agir. +1 ação por turno neste nível.' },
+      { name: '🟠 Laranja — Quebra da Quarta Parede (19 XP)', desc: 'Pode comprar uma carta de Traço Zumbi extra no início do turno.' },
+      { name: '🔴 Vermelho — Imortal Cômico (43 XP)', desc: 'A primeira vez que seria eliminado em cada rodada, fica com 1 de vida.' }
     ],
     color: '#AA0000'
   },
   {
-    id: 'spiderman', name: 'Homem-Aranha', emoji: '🕷️', side: 'Super-Herói Inimigo', team: 'villain',
-    power: 'Herói vivo. Controlado pelo jogo. Aparece ao ser sacado do deck de Super-Heróis.',
-    stats: ['Ações: 2', 'Resistência: variável', 'XP: = Resistência'],
+    id: 'ironman', name: 'Homem de Ferro', emoji: '🦾', side: 'Zumbi Herói • Caixa Base', team: 'hero',
+    power: 'Artilheiro e suporte técnico. Ataca 4 alvos diferentes com seus repulsores.',
+    stats: ['Vida: 5', 'Fome máx: 4', 'Acurácia: 4+'],
     abilities: [
-      { name: 'Habilidade Única', desc: 'Aparece sempre na zona mais próxima de um Zumbi Herói. Representa seu balanceio em teias. Ver carta de Super-Herói para detalhes.' },
-      { name: 'Ameaça Ativa', desc: 'Enquanto estiver no tabuleiro, sua habilidade única está em efeito constante. Leia a carta assim que for sacada.' },
-      { name: 'Duas Ações', desc: 'Age 2 vezes por ativação: pode mover + atacar, atacar + mover, ou mover + mover.' }
+      { name: 'Repulsores em Rajada (Ataque Especial)', desc: 'Ataca até 4 alvos diferentes. Acerta 4+. Causa 1 de dano cada.' },
+      { name: 'Devorar (Ataque Base)', desc: 'Corpo a corpo, zona atual, acerta 4+. Elimina 1 alvo e zera a Fome.' },
+      { name: '🔵 Azul — Análise de Combate', desc: 'Uma vez por rodada, pode rolar novamente um dado de ataque.' },
+      { name: '🟡 Amarelo — Voo (7 XP)', desc: 'Ignora penalidade de movimento por inimigos. +1 ação por turno neste nível.' },
+      { name: '🟠 Laranja — Mísseis Teleguiados (19 XP)', desc: 'Ataques à distância ignoram linha de visão.' },
+      { name: '🔴 Vermelho — Inteligência Artificial (43 XP)', desc: 'Pode realizar uma ação extra por turno (não pode ser ataque).' }
+    ],
+    color: '#CC4400'
+  },
+  {
+    id: 'capamerica', name: 'Capitão América', emoji: '🛡️', side: 'Zumbi Herói • Caixa Base', team: 'hero',
+    power: 'Tanque e líder. O escudo ricocheteia para um segundo alvo. Protege aliados.',
+    stats: ['Vida: 5', 'Fome máx: 4', 'Acurácia: 4+'],
+    abilities: [
+      { name: 'Ricochete de Escudo (Ataque Especial)', desc: 'Ataca 1 alvo. Se acertar, o escudo ricocheteia para um segundo alvo adjacente. Acerta 4+. Causa 1 dano em cada.' },
+      { name: 'Devorar (Ataque Base)', desc: 'Corpo a corpo, zona atual, acerta 4+. Elimina 1 alvo e zera a Fome.' },
+      { name: '🔵 Azul — Escudo Protetor', desc: 'Uma vez por rodada, pode absorver 1 de dano causado a um aliado na mesma zona.' },
+      { name: '🟡 Amarelo — Vingador Estratégico (7 XP)', desc: 'Todos os aliados na mesma zona ganham +1 de dano corpo a corpo. +1 ação por turno neste nível.' },
+      { name: '🟠 Laranja — Contra-Ataque (19 XP)', desc: 'Sempre que sofre dano, realiza ataque gratuito.' },
+      { name: '🔴 Vermelho — Líder dos Vingadores (43 XP)', desc: 'Uma vez por rodada, pode dar uma ação extra a um aliado.' }
+    ],
+    color: '#4488FF'
+  },
+  // ===== SUPER-HERÓIS INIMIGOS — CAIXA BASE =====
+  {
+    id: 'spiderman_enemy', name: 'Homem-Aranha', emoji: '🕷️', side: 'Super-Herói Inimigo • Caixa Base', team: 'villain',
+    power: 'Controlado pelo jogo. Esquiva e se move rapidamente entre zonas.',
+    stats: ['Ações: 2', 'XP: = Resistência', 'Habilidade única'],
+    abilities: [
+      { name: 'Inimigo Especial', desc: 'Controlado pelo jogo. Aparece ao ser sacado do deck de Super-Heróis.' },
+      { name: 'Habilidade Única Ativa', desc: 'Enquanto estiver no tabuleiro, sua habilidade especial está em efeito constante. Leia a carta imediatamente.' },
+      { name: 'Esquiva e Velocidade', desc: 'Esquiva ativa e se move rapidamente entre zonas. 2 ações por ativação.' },
+      { name: 'Eliminar exige 1 ataque', desc: 'Todo dano necessário para eliminar deve ser causado em UM ÚNICO ataque.' }
     ],
     color: '#CC0000'
   },
   {
-    id: 'thor', name: 'Thor', emoji: '⚡', side: 'Super-Herói Inimigo', team: 'villain',
-    power: 'Herói vivo. Controlado pelo jogo. Causa 2 ferimentos por ataque.',
-    stats: ['Ações: 2', 'Resistência: alta', 'XP: = Resistência'],
+    id: 'thor_enemy', name: 'Thor', emoji: '⚡', side: 'Super-Herói Inimigo • Caixa Base', team: 'villain',
+    power: 'Ataques em área com raios. Causa muito dano. Um dos inimigos mais perigosos.',
+    stats: ['Ações: 2', 'XP: = Resistência', 'Habilidade única'],
     abilities: [
-      { name: 'Ataque de 2 Ferimentos', desc: 'Diferente dos inimigos comuns que causam 1 ferimento, Thor causa 2 ferimentos por ataque bem-sucedido.' },
-      { name: 'Alta Resistência', desc: 'Precisa de muitos Hits em um único ataque para ser eliminado. Vale bastante XP.' },
-      { name: 'Duas Ações', desc: 'Age 2 vezes por ativação como todos os Super-Heróis.' }
+      { name: 'Ataques de Relâmpago', desc: 'Ataques em área. Muito dano por ativação. 2 ações por ativação.' },
+      { name: 'Habilidade Única Ativa', desc: 'Ver carta ao ser sacado do deck. Efeito ativo enquanto estiver no tabuleiro.' }
     ],
     color: '#FFCC00'
   },
   {
-    id: 'panthera', name: 'Pantera Negra', emoji: '🐾', side: 'Super-Herói Inimigo', team: 'villain',
-    power: 'Herói vivo. Controlado pelo jogo. Garras de vibranium.',
-    stats: ['Ações: 2', 'Resistência: variável', 'XP: = Resistência'],
+    id: 'drstrange_enemy', name: 'Doutor Estranho', emoji: '🔮', side: 'Super-Herói Inimigo • Caixa Base', team: 'villain',
+    power: 'Age como ponto de spawn adicional. Pode teletransportar inimigos.',
+    stats: ['Ações: 2', 'XP: = Resistência', 'Habilidade única'],
     abilities: [
-      { name: 'Habilidade Única', desc: 'Ver carta de Super-Herói quando for sacada do deck. Habilidade ativa enquanto estiver no tabuleiro.' },
-      { name: 'Duas Ações', desc: 'Age 2 vezes por ativação.' }
+      { name: 'Spawn Adicional', desc: 'Enquanto ativo, funciona como ponto de spawn extra gerando mais inimigos.' },
+      { name: 'Teletransporte', desc: 'Pode teletransportar inimigos para outras zonas do tabuleiro.' }
+    ],
+    color: '#AA44FF'
+  },
+  // ===== X-MEN RESISTANCE =====
+  {
+    id: 'wolverine', name: 'Wolverine', emoji: '🐺', side: 'Herói Vivo • X-Men Resistance', team: 'xmen',
+    power: 'Berserker com regeneração. 3 ataques corpo a corpo por ação especial.',
+    stats: ['Acurácia: 3+', '3 ataques/especial', 'Cura passiva'],
+    abilities: [
+      { name: 'Garras de Adamantium (Ataque Especial)', desc: 'Realiza 3 ataques corpo a corpo (mesmo alvo ou diferentes). Cada ataque acerta 3+ e causa 1 de dano.' },
+      { name: '🔵 Azul — Fator de Cura', desc: 'Início do turno, recupera 1 de vida.' },
+      { name: '🟡 Amarelo — Fúria Berserker', desc: 'Para cada inimigo eliminado no turno, +1 de dano no próximo ataque.' },
+      { name: '🟠 Laranja — O Melhor no Que Faz', desc: 'Pode repetir qualquer resultado de dado uma vez por ataque.' },
+      { name: '🔴 Vermelho — Imortal', desc: 'Primeira vez que seria eliminado em cada rodada, fica com 1 de vida.' }
+    ],
+    color: '#FFB300'
+  },
+  {
+    id: 'storm', name: 'Tempestade', emoji: '⛈️', side: 'Herói Vivo • X-Men Resistance', team: 'xmen',
+    power: 'Controle de multidão. Ataca todos inimigos em até 2 zonas.',
+    stats: ['Acurácia: 5+ (→4+)', 'Alcance: 2 zonas', 'Dano em área'],
+    abilities: [
+      { name: 'Relâmpagos (Ataque Especial)', desc: 'Ataca TODOS inimigos em até 2 zonas. Acerta 5+. Causa 1 de dano.' },
+      { name: '🔵 Azul — Nevoeiro', desc: 'Inimigos a mais de 1 zona têm -1 dado em ataques.' },
+      { name: '🟡 Amarelo — Chuva Ácida', desc: 'No início da fase inimiga, todos os inimigos sofrem 1 de dano.' },
+      { name: '🟠 Laranja — Ventos Cortantes', desc: 'Ataque especial passa a acertar 4+ (em vez de 5+).' },
+      { name: '🔴 Vermelho — Deusa do Trovão', desc: 'Ataque especial atinge todo o tabuleiro e causa 2 de dano.' }
+    ],
+    color: '#66AAFF'
+  },
+  {
+    id: 'colossus', name: 'Colossus', emoji: '🦾', side: 'Herói Vivo • X-Men Resistance', team: 'xmen',
+    power: 'Tanque protetor. Reduz 2 de dano sofrido. Protege aliados na mesma zona.',
+    stats: ['Acurácia: 4+', 'Dano: 2', 'Defesa: -2 dano'],
+    abilities: [
+      { name: 'Esmagamento de Metal Orgânico (Ataque Especial)', desc: 'Ataca todos inimigos na zona. Acerta 4+. Causa 2 de dano.' },
+      { name: '🔵 Azul — Pele de Aço', desc: 'Reduz todo dano sofrido em 2 (mínimo 1).' },
+      { name: '🟡 Amarelo — Arremesso Rápido', desc: 'Pode arremessar aliados para zonas adjacentes.' },
+      { name: '🟠 Laranja — Muralha Viva', desc: 'Aliados na mesma zona recebem metade do dano.' },
+      { name: '🔴 Vermelho — Inquebrável', desc: 'Ignora completamente o primeiro ataque que sofrer por rodada.' }
+    ],
+    color: '#888888'
+  },
+  {
+    id: 'magneto', name: 'Magneto', emoji: '🔮', side: 'Herói Vivo • X-Men Resistance', team: 'xmen',
+    power: 'Controle e dano em massa. Move inimigos metálicos. Ataque em linha reta.',
+    stats: ['Acurácia: 4+', 'Linha reta', 'Empurra alvos'],
+    abilities: [
+      { name: 'Tempestade Metálica (Ataque Especial)', desc: 'Ataca todos inimigos em linha reta. Acerta 4+. Causa 1 de dano e empurra.' },
+      { name: '🔵 Azul — Mestre do Magnetismo', desc: 'Pode mover objetos metálicos e inimigos com metal pelo tabuleiro.' },
+      { name: '🟡 Amarelo — Escudo Metálico', desc: 'Recebe +2 de defesa contra ataques à distância.' },
+      { name: '🟠 Laranja — Ira Mutante', desc: 'Ataque especial causa 2 de dano.' },
+      { name: '🔴 Vermelho — Asteroide M', desc: 'Pode levantar e mover um tile inteiro com todos os inimigos que estão nele.' }
+    ],
+    color: '#CC44FF'
+  },
+  // ===== HEROES RESISTANCE =====
+  {
+    id: 'blackpanther', name: 'Pantera Negra', emoji: '🐾', side: 'Herói Vivo • Heroes Resistance', team: 'shield',
+    power: 'Velocidade e absorção. Garras de vibranium com 3+ de acurácia.',
+    stats: ['Acurácia: 3+', 'Dano: 2', 'Absorve dano'],
+    abilities: [
+      { name: 'Garras de Vibranium (Ataque Especial)', desc: 'Ataca 1 alvo. Acerta 3+. Causa 2 de dano. Absorve 1 de dano do próximo ataque recebido.' },
+      { name: '🔵 Azul — Traje de Vibranium', desc: 'Reduz dano sofrido em 1.' },
+      { name: '🟡 Amarelo — Rei de Wakanda', desc: 'Aliados na mesma zona ganham +1 de defesa.' },
+      { name: '🟠 Laranja — Ataque Furtivo', desc: 'Pode atacar e se mover sem provocar reações de inimigos.' },
+      { name: '🔴 Vermelho — Pantera Imortal', desc: 'O primeiro dano recebido por rodada é ignorado completamente.' }
     ],
     color: '#AA44FF'
   },
   {
-    id: 'mrsmarvel', name: 'Sra. Marvel (Kamala)', emoji: '✊', side: 'Super-Herói Inimigo', team: 'villain',
-    power: 'Herói vivo. Controlado pelo jogo. Poderes de embiggenamento.',
-    stats: ['Ações: 2', 'Resistência: variável', 'XP: = Resistência'],
+    id: 'wintersoldier', name: 'Soldado Invernal', emoji: '🦾', side: 'Herói Vivo • Heroes Resistance', team: 'shield',
+    power: 'Artilheiro e assassino. Causa 3 de dano com braço cibernético.',
+    stats: ['Acurácia: 3+', 'Dano: 3', 'Alcance: qualquer'],
     abilities: [
-      { name: 'Habilidade Única', desc: 'Ver carta de Super-Herói quando for sacada do deck.' },
-      { name: 'Duas Ações', desc: 'Age 2 vezes por ativação.' }
+      { name: 'Braço Cibernético (Ataque Especial)', desc: 'Ataca 1 alvo. Acerta 3+. Causa 3 de dano (maior dano único da caixa).' },
+      { name: '🔵 Azul — Pontaria Letal', desc: 'Pode repetir um dado de ataque por rodada.' },
+      { name: '🟡 Amarelo — Soldado de Gelo', desc: 'Ignora efeitos de terreno e obstáculos.' },
+      { name: '🟠 Laranja — Atirador de Elite', desc: 'Pode atingir alvos a qualquer distância no tabuleiro.' },
+      { name: '🔴 Vermelho — Missão Fantasma', desc: 'Uma vez por jogo: realiza 4 ações consecutivas sem interrupção.' }
     ],
-    color: '#4499FF'
+    color: '#4488FF'
   },
+  // ===== S.H.I.E.L.D. (INIMIGOS COMUNS) =====
   {
-    id: 'trooper', name: 'Trooper S.H.I.E.L.D.', emoji: '👮', side: 'Inimigo Comum', team: 'shield',
-    power: 'Agentes básicos da S.H.I.E.L.D. Força está nos números. Bastões de choque.',
-    stats: ['Ações: 1', 'Resistência: 1', 'XP: 1'],
+    id: 'trooper', name: 'Soldado (Trooper)', emoji: '👮', side: 'Inimigo S.H.I.E.L.D.', team: 'shield',
+    power: 'Inimigo básico. Força está nos números. Bastões de choque.',
+    stats: ['Vida: 1', 'Ações: 1', 'XP: 1'],
     abilities: [
-      { name: 'Ataque Automático', desc: '1 ferimento garantido. Sem rolagem de dados para atacar.' },
-      { name: 'Movimento', desc: 'Se não há Zumbi Herói na zona, move 1 zona em direção ao mais próximo.' },
-      { name: 'Prioridade 3', desc: 'Terceiro na ordem de Prioridade de Alvos. Atacado após Super-Heróis e Guards.' }
+      { name: 'Ataque Automático', desc: '1 ferimento garantido por ataque. Sem rolagem de dados.' },
+      { name: 'Prioridade 3', desc: 'Atacado após Super-Heróis e Guards. Eliminado com 1 hit.' },
+      { name: 'Spawn padrão', desc: 'Azul=2, Amarelo=3, Laranja=7, Vermelho=9 Soldados por spawn.' }
     ],
     color: '#4488FF'
   },
   {
-    id: 'guard', name: 'Guard S.H.I.E.L.D.', emoji: '🛡️', side: 'Inimigo Médio', team: 'shield',
-    power: 'Elite da S.H.I.E.L.D. Armadura pesada e luvas de choque. Às vezes escolta Espectadores.',
-    stats: ['Ações: 1', 'Resistência: 2', 'XP: 1'],
+    id: 'guard', name: 'Guarda (Guard)', emoji: '🛡️', side: 'Inimigo S.H.I.E.L.D.', team: 'shield',
+    power: 'Elite da S.H.I.E.L.D. Armadura pesada. Precisa de 2 hits num único ataque.',
+    stats: ['Vida: 2', 'Ações: 1', 'XP: 1'],
     abilities: [
-      { name: 'Resistência 2', desc: 'Precisa de 2 Hits em um único ataque para ser eliminado. Hits não acumulam!' },
-      { name: 'Escolta', desc: 'Pode aparecer escoltando Espectadores em cartas do tipo "Escorted Bystander".' },
-      { name: 'Prioridade 2', desc: 'Segundo na ordem de Prioridade de Alvos, após Super-Heróis.' }
+      { name: 'Resistência 2', desc: 'Precisa de 2 hits em UM ÚNICO ataque para ser eliminado. Hits não acumulam!' },
+      { name: 'Escolta Civis', desc: 'Pode aparecer escoltando civis em cartas "Escorted Bystander".' },
+      { name: 'Prioridade 2', desc: 'Segundo na ordem de alvos, atacado após Super-Heróis.' }
     ],
     color: '#6655AA'
+  },
+  {
+    id: 'specialist', name: 'Especialista (Specialist)', emoji: '🚀', side: 'Inimigo S.H.I.E.L.D.', team: 'shield',
+    power: 'Elite rápida com jetpack. 2 ações por turno. Pode cair direto em cima dos zumbis.',
+    stats: ['Vida: 1', 'Ações: 2', 'XP: 1'],
+    abilities: [
+      { name: '2 Ações', desc: 'Pode mover + atacar, atacar + mover ou atacar duas vezes por ativação.' },
+      { name: 'Jetpack', desc: 'Alta mobilidade. Pode aparecer diretamente sobre os Zumbis Heróis.' },
+      { name: 'Prioridade 4', desc: 'Último na ordem de alvos apesar de ser o mais ágil.' }
+    ],
+    color: '#44AAFF'
   }
 ];
 
